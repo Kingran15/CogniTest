@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <title>Mini Cog</title>
+    <link rel = "stylesheet" href = "css/mini_cog.css">
+
+    <!--<script async type = "text/javascript" src="js/opencv.js" onload="onOpenCvReady();"></script>-->
+    <script type = "text/javascript" src = "js/mini_cog.js"></script>
+    <script type = "text/javascript" src="cordova.js"></script>
+  </head>
+  <body>
+    
+    <div class = "start_test" id = "step_0">
+      <input type = "button" class = "start" id = "mini_cog_q1" name = "mini_cog_q1_button" value = "Start" onclick = "nextStep()">
+    </div>
+    <div class = "super_container" id = "super_container">
+    
+    <div class = "three_words" id = "step_1" style = "display: none;">
+      <h1>Step 1: Three Word Registration</h1>
+      <p id = "instructions_1">Please listen carefully. I am going to say three words that I want you to repeat back now and try to remember. The words are [words]. Please say them for me when the prompt appears.</p>
+      
+      <div class = "recording" id = "record_container">
+        <input type = "image" src = "img/recording2.png" class = "record_button" id = "record_button_1" name = "record_button_words" onclick="listenForWords()">
+        <input type = "button" class = "record_submit" id = "record_submit_1" value = "Next Step" onclick = "getResults()">
+        <ul class = "word_list" id = "recognized_words_1">
+
+        </ul>
+      </div>
+    </div>
+
+    <div class = "clock_draw" id = "step_2">
+      <h1>Step 2: Clock Drawing</h1>
+      <p id = "clock_instructions">Next, please draw a clock. First, put in all of the numbers where they go. Then, set the hands to ten past eleven. You will have 3 minutes. Click the button below to begin.</p>
+      
+      <input id = "begin_clock_draw" type = "button" value = "Begin" onclick="beginTimer()">
+
+      <div class = "clock_draw_ongoing" id = "clock_draw_ongoing_container">
+        <span id = "timer">3:00</span>
+        <input id = "finish_clock_draw" type = "button" value = "Next Step" onclick="nextStep()">
+      </div>
+      <!--
+      <input type = "button" onclick="compare();" value = "Begin Comparison"></button>
+      <div class = "canvas_container">
+          <canvas id = "clock_canvas"></canvas>
+      </div>
+
+      <img id = "reference_clock" src = "img/test.jpg" style="display: none;"></img>
+
+      <div class = "templates">
+        <img id = "12_temp" src = "img/12.jpg"></img>
+      </div>
+    -->
+    </div>
+
+    <div class = "word_recall_div" id = "step_3" style = "display: none;">
+      <p id = "word_recall_prompt">What were the three words I asked you to remember?</p>
+      
+      <div class = "recording" id = "record_container_2">
+        <input type = "image" src = "img/recording2.png" class = "record_button" id = "record_button_2" name = "record_button_words_2" onclick="recallComplete()">
+        <input type = "button" class = "record_submit" id = "record_submit_2" value = "Finish" onclick = "getResults()">
+        <ul class = "word_list" id = "recognized_words_2">
+
+        </ul>
+      </div>
+    </div>
+    </div>
+  </body>
+</html>

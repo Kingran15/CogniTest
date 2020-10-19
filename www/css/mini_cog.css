@@ -1,0 +1,136 @@
+html,body {
+    background-color: #ffde59;
+    height: 100%;
+    font-size: 32px;
+}
+
+input {
+    font-size: 32px;
+}
+
+p {
+    font-size: 40px;
+}
+
+.start_test { 
+    height: 100%;
+    position: relative;
+}
+
+#finish_clock_draw {
+    display: block;
+    margin: 0 auto;
+}
+
+.start {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 36px;
+    border-radius: 15%;
+    font-family: "Century Gothic",Times,serif;
+    color: #f4f4f4;
+    background-color: #080808;
+    padding: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.three_words {
+    display: none;
+}
+
+h1 {
+    font-size: 72px;
+}
+
+.clock_draw {
+    display: none;
+}
+
+.canvas_container {
+    display: block;
+    margin-left:auto;
+    margin-right: auto;
+}
+
+.canvas_container canvas {
+    display: block;
+    margin-left:auto;
+    margin-right: auto;
+}
+
+.canvas_container .number_card {
+    display: inherit;
+    text-align: center;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 36px;
+    width: 70px;
+    height: 70px;
+    padding: 10px;
+}
+
+.templates {
+    display: none;
+}
+
+.recording {
+    display: none;
+    text-align: center;
+}
+
+.record_submit {
+    display: block;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.record_button {
+    display: block;
+    margin: 0 auto;
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.word_list {
+    margin: 0 auto;
+    text-align: center;
+    list-style-type: none;
+    font-size: 48px;
+    padding: 0;
+}
+
+#begin_clock_draw {
+    opacity: .6;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px;
+    font-size: 24px;
+}
+
+.clock_draw_ongoing {
+    display: none;
+}
+
+#timer {
+    display: block;
+    text-align: center;
+    margin: 24px auto;
+    padding: 20px;
+    font-size: 72px;
+    background-color: #dbdbdb;
+    font-weight: bold;
+    border-style: solid;
+    border-color: #080808;
+    border-width: 4px;
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "css/results.css">
+    <title>Results</title>
+    <script type = "text/javascript" src = "js/results.js"></script>
+    <script type = "text/javascript" src="cordova.js"></script>
+</head>
+<body>
+    <h1 class = "results_header">RESULTS</h1>
+
+    <div class = "prompted_score" id = "step_0">
+        <p id = "prompt">Before we give the full results, lets score that clock drawing!</p>
+        <input id = "prompt_button" type = "button" value = "Begin" onclick = "beginScoring()">
+    </div>
+
+    <div class = "score_numbers" id = "step_1">
+         <div class = "question" id = "q1">
+            <p class="prompter">First, check to see if the 12 is near the position below. (Very top of circle)</p>
+            <ul class = "input_list">
+                <li><input type = "radio" id = "yes_1" name = "twelve_check" value = "yes" onclick="allowContinue(1)">
+                <label for = "yes_1">Yes</label><br></li>
+                <li><input type = "radio" id = "no_1" name = "twelve_check" value = "no" onclick="allowContinue(1)">
+                <label for = "no_1">No</label><br></li>
+            </ul>
+            
+            <input type = "button" class = "continue" id = "continue_1" value = "Continue" onclick="continueTo(2)"><br><br>
+            <img class = "clocks" id = "twelve_clock" src = "img/clocks/twelve_focus.png"></img>
+         </div>
+         <div class = "question" id = "q2">
+            <p class = "prompter">Next, check to see if the 3 is near the position below. (Right of the circle)</p>
+            <ul class = "input_list">
+                <li><input type = "radio" id = "yes_2" name = "three_check" value = "yes" onclick="allowContinue(2)">
+                <label for = "yes_2">Yes</label><br></li>
+                <li><input type = "radio" id = "no_2" name = "three_check" value = "no" onclick="allowContinue(2)">
+                <label for = "no_2">No</label><br></li>
+            </ul>
+            
+            <input type = "button" class = "continue" id = "continue_2" value = "Continue" onclick="continueTo(3)"><br><br>
+            <img class = "clocks" id = "three_clock" src = "img/clocks/three_focus.png"></img>
+         </div>
+         <div class = "question" id = "q3">
+            <p class = "prompter">Next, check to see if the 6 is near the position below. (Bottom of the circle)</p>
+            <ul class = "input_list">
+                <li><input type = "radio" id = "yes_3" name = "six_check" value = "yes" onclick="allowContinue(3)">
+                <label for = "yes_3">Yes</label><br></li>
+                <li><input type = "radio" id = "no_3" name = "six_check" value = "no" onclick="allowContinue(3)">
+                <label for = "no_3">No</label><br></li>
+            </ul>
+            
+            <input type = "button" class = "continue" id = "continue_3" value = "Continue" onclick="continueTo(4)"><br><br>
+            <img class = "clocks" id = "six_clock" src = "img/clocks/six_focus.png"></img>
+         </div>
+         <div class = "question" id = "q4">
+            <p class = "prompter">Next, check to see if the 9 is near the position below. (Left of the circle)</p>
+            <ul class = "input_list">
+                <li><input type = "radio" id = "yes_4" name = "nine_check" value = "yes" onclick="allowContinue(4)">
+                <label for = "yes_4">Yes</label><br></li>
+                <li><input type = "radio" id = "no_4" name = "nine_check" value = "no" onclick="allowContinue(4)">
+                <label for = "no_4">No</label><br></li>
+            </ul>
+            
+            <input type = "button" class = "continue" id = "continue_4" value = "Continue" onclick="continueTo(5)"><br><br>
+            <img class = "clocks" id = "nine_clock" src = "img/clocks/nine_focus.png"></img>
+         </div>
+         <div class = "question" id = "q5">
+            <p class = "prompter"> Are the rest of the numbers, beginning from 12, in the order shown below?</p>
+            <ul class = "input_list">
+                <li><input type = "radio" id = "yes_5" name = "all_check" value = "yes" onclick="allowContinue(5)">
+                <label for = "yes_5">Yes</label><br></li>
+                <li><input type = "radio" id = "no_5" name = "all_check" value = "no" onclick="allowContinue(5)">
+                <label for = "no_5">No</label><br></li>
+            </ul>
+            <input type = "button" class = "continue" id = "continue_5" value = "Continue" onclick="continueTo(6)"><br><br>
+            <img class = "clocks" id = "all_num" src = "img/clocks/no_hands_filled.png"></img>
+         </div>
+
+         <div class = "question" id = "q6">
+            <p class = "prompter"> Is the short hand of the clock pointing to the 11 as seen below?</p>
+            <ul class = "input_list">
+                <li><input type = "radio" id = "yes_6" name = "short_check" value = "yes" onclick="allowContinue(6)">
+                <label for = "yes_6">Yes</label><br></li>
+                <li><input type = "radio" id = "no_6" name = "short_check" value = "no" onclick="allowContinue(6)">
+                <label for = "no_6">No</label><br></li>
+            </ul>
+            <input type = "button" class = "continue" id = "continue_6" value = "Continue" onclick="continueTo(7)"><br><br>
+            <img class = "clocks" id = "short_hand" src = "img/clocks/short_hand.png"></img>
+         </div>
+
+         <div class = "question" id = "q7">
+            <p class = "prompter"> Is the long hand of the clock pointing to the 2 as seen below?</p>
+            <ul class = "input_list">
+                <li><input type = "radio" id = "yes_7" name = "long_check" value = "yes" onclick="allowContinue(7)">
+                <label for = "yes_7">Yes</label><br></li>
+                <li><input type = "radio" id = "no_7" name = "long_check" value = "no" onclick="allowContinue(7)">
+                <label for = "no_7">No</label><br></li>
+            </ul>
+
+            <input type = "button" class = "continue" id = "continue_7" value = "Continue" onclick="finalize()"><br><br>
+            <img class = "clocks" id = "short_hand" src = "img/clocks/long_hand.png"></img>
+         </div>
+    </div>
+
+    <div class = "table_result" id = "step_2">      
+        <span id = "score_report"></span>
+        <br>
+        <table class="tg">
+            <thead>
+              <tr>
+                <th class="tg-z2lj">Score</th>
+                <th class="tg-z2lj">Meaning</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr id = "5_row">
+                <td class="tg-bcly">5</td>
+                <td class="tg-z2lj">Looks good! You should be fine, but please do not hesitate contact a medical professional if you still have serious concerns.</td>
+              </tr>
+              <tr id = "4_row">
+                <td class="tg-bcly">4</td>
+                <td class="tg-z2lj">Looks ok, but you may want to consider further testing or the consultation of a doctor.</td>
+              </tr>
+              <tr id = "3_row">
+                <td class="tg-bcly">&lt; 3</td>
+                <td class="tg-z2lj">These results are potentially concerning. You should seek medical aid if you have had prior concerns.</td>
+              </tr>
+            </tbody>
+            </table>
+    </div>
+</body>
+</html>

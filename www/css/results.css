@@ -1,0 +1,82 @@
+body {
+    background-color: #ffde59;
+    font-size: 32px;
+}
+
+input {
+    font-size: 32px;
+}
+
+.results_header {
+    text-align: center;
+    font-size: 72px;
+}
+
+#prompt_button {
+    text-align: center;
+}
+
+#score_report {
+    font-size: 48px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#step_0 {
+    display: block;
+}
+
+#step_1 {
+    display: none;
+}
+
+.clocks {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.question {
+    display: none;
+    text-align: center;
+    margin: 0 40px;
+    font-size: 32px;
+}
+
+.prompter {
+    text-align: center;
+}
+
+.prompted_score {
+    text-align: center;
+    margin: 0 40px;
+    font-size: 32px;
+}
+
+.continue {
+    opacity: .6;
+}
+
+.input_list {
+    margin: 0 auto;
+    list-style-type: none;
+    text-align: center;
+}
+
+.table_result {
+    display: none;
+}
+
+.tg  {
+    border-collapse:collapse;border-spacing:0;margin:0px auto;
+}
+
+.tg td {
+    border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;
+}
+.tg th {
+    border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;
+}
+.tg .tg-bcly{font-family:Verdana, Geneva, sans-serif !important;;font-size:32px;font-weight:bold;text-align:center;vertical-align:top}
+.tg .tg-z2lj{font-family:Verdana, Geneva, sans-serif !important;;font-size:32px;text-align:left;vertical-align:top}

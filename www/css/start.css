@@ -1,0 +1,28 @@
+body {
+  background-color: #ffde59;
+}
+
+.app_name h1 {
+    font-family: "Century Gothic",Times,serif;
+    font-size: 96px;
+    color: #080808;
+    text-align: center;
+}
+
+.page_select li {
+  text-align: center;
+}
+
+.page_select input {
+  font-family: "Century Gothic",Times,serif;
+  font-size: 36px;
+  color: #ffde59;
+  background-color: #080808;
+  padding: 10px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.input_list {
+  list-style-type: none;
+}
